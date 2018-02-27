@@ -3,5 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import LoginPage from './Login/LoginPage';
+import SignUpPage from './SignUp/SignUpPage';
+
+ReactDOM.render(<SignUpPage />, document.getElementById('root'));
 registerServiceWorker();
