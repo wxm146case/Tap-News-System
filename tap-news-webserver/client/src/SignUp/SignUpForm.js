@@ -1,5 +1,6 @@
 import './SignUpForm.css';
 
+import { Link } from 'react-router'
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -38,7 +39,7 @@ const SignUpForm = ({
           <input type="submit" className="waves-effect waves-light btn indigo lighten-1" value='Sign Up'/>
         </div>
         <div className="row">
-          <p className="right-align"> Already have an account? <a href="/login">Login</a></p>
+          <p className="right-align"> Already have an account? <Link to="/login">Login</Link></p>
         </div>
       </form>
     </div>
