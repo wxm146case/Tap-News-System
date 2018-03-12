@@ -9,7 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'common'))
 from cloudAMQP_client import CloudAMQPClient
 
 DEDUPE_NEWS_TASK_QUEUE_URL = "amqp://cxbvzhhv:xFiYCmEgRR8jNd3JFEQQXqptVurwpHhb@wombat.rmq.cloudamqp.com/cxbvzhhv"
-DEDUPE_NEWS_TASK_QUEUE_NAME = "tap-news-scrape-news-task-queue"
+DEDUPE_NEWS_TASK_QUEUE_NAME = "tap-news-deque-news-task-queue"
 SCRAPE_NEWS_TASK_QUEUE_URL = "amqp://xwovqrjz:iRBK06kHo8q8G5g9I2AjvGHmO6ArZn6p@wombat.rmq.cloudamqp.com/xwovqrjz"
 SCRAPE_NEWS_TASK_QUEUE_NAME = "tap-news-scrape-news-task-queue"
 
