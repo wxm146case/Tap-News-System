@@ -8,7 +8,7 @@ import _ from 'lodash';
 class NewsPanel extends React.Component {
   constructor() {
     super();
-    this.state = {news : null};
+    this.state = {news:null, pageNum:1, loadedAll:false};
   }
 
   componentDidMount() {
@@ -26,22 +26,32 @@ class NewsPanel extends React.Component {
   }
 
   loadMoreNews() {
+    if (this.state.loadedAll == true) {
+      return;
+    }
+
     console.log('Loading more news');
 
-    const news_url = 'http://' + window.location.hostname + ':3000' + '/news';
-    const request = new Request(news_url, {
+    const news_url = 'http://' + window.location.hostname + ':3000' +
+        '/news/userId/' + Auth.getEmail() + '/pageNum/' + this.state.pageNum;
+    const request = new Request(encodeURI(news_url), {
       method: 'GET',
       headers: {
         'Authorization': 'bearer ' + Auth.getToken(),
-      }
+      },
     });
 
     fetch(request)
       .then(res => res.json())
       .then(fetched_news_list => {
-        this.setState({
-            news: this.state.news ? this.state.news.concat(fetched_news_list) : fetched_news_list,
-        });
+        if (!fetched_news_list || fetched_news_list.length == 0) {
+          this.setState({loadedAll:true});
+        } else {
+          this.setState({
+              news: this.state.news ? this.state.news.concat(fetched_news_list) : fetched_news_list,
+              pageNum: this.state.pageNum + 1,
+          });
+        }
       });
   }
 

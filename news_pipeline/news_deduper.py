@@ -16,7 +16,7 @@ DEDUPE_NEWS_TASK_QUEUE_NAME = "tap-news-deque-news-task-queue"
 
 SLEEP_TIME_IN_SECONDS = 1
 
-NEWS_TABLE_NAME = "tap-news"
+NEWS_TABLE_NAME = "news"
 
 SAME_NEWS_SIMILARITY_THRESHOLD = 0.9
 

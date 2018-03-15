@@ -1,3 +1,4 @@
+"""Backend Service"""
 import json
 import os
 import sys
@@ -22,11 +23,18 @@ def get_one_news():
     print("getOneNews is called")
     return json.loads(dumps(operations.getOneNews()))
 
+def get_news_summaries_for_user(user_id, page_num):
+    """ Get news summaries for a user. """
+    print("get_news_summaries_for_user is called with %s and %s" %
+    (user_id, page_num))
+    return operations.getNewsSummariesForUser(user_id, page_num)
 
 # Threading RPC Server
 RPC_SERVER = SimpleJSONRPCServer((SERVER_HOST, SERVER_PORT))
 RPC_SERVER.register_function(add, 'add')
 RPC_SERVER.register_function(get_one_news, 'getOneNews')
+RPC_SERVER.register_function(
+    get_news_summaries_for_user, 'getNewsSummariesForUser')
 
 print("Starting RPC server on %s:%d" % (SERVER_HOST, SERVER_PORT))
 
