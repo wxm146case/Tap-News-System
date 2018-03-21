@@ -24,7 +24,15 @@ function getNewsSummariesForUser(user_id, page_num, callback) {
   });
 }
 
+function logNewsClickForUser(user_id, news_id) {
+  client.request('logNewsClickForUser', [user_id, news_id], function(err, response) {
+    if (err) throw err;
+    console.log(response);
+  });
+}
+
 module.exports = {
-    add : add,
-    getNewsSummariesForUser : getNewsSummariesForUser
+  add : add,
+  getNewsSummariesForUser : getNewsSummariesForUser,
+  logNewsClickForUser : logNewsClickForUser
 };

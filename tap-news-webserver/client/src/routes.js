@@ -1,12 +1,15 @@
-import App from './App/App';
-import Auth from './Auth/Auth';
 import Base from './Base/Base';
+import App from './App/App';
 import LoginPage from './Login/LoginPage';
 import SignUpPage from './SignUp/SignUpPage';
+import Auth from './Auth/Auth';
+
 
 const routes = {
+  // base component (wrapper for the whole application).
   component: Base,
   childRoutes: [
+
     {
       path: '/',
       getComponent: (location, callback) => {
@@ -33,6 +36,7 @@ const routes = {
       onEnter: (nextState, replace) => {
         Auth.deauthenticateUser();
 
+        // change the current URL to /
         replace('/');
       }
     }

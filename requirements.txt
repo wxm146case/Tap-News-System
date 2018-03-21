@@ -1,6 +1,7 @@
 jsonrpclib-pelix
 newspaper3k
 numpy
+pandas
 pika
 pymongo
 python-dateutil
@@ -8,3 +9,5 @@ redis
 requests
 scipy
 sklearn
+tensorflow
+watchdog
