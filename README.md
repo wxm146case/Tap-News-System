@@ -11,5 +11,5 @@ This is a real time news scraping and recommendation system. The system uses a n
 
 ● Deployed an online classifying service for news topic modeling using the trained model.
 
-#Architecture
+# Architecture
 ![image](https://github.com/wxm146case/Tap-News-System/blob/master/structure.PNG)
