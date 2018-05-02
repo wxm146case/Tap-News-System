@@ -10,3 +10,6 @@ This is a real time news scraping and recommendation system. The system uses a n
 ● Designed and built an offline training pipeline for news topic modeling (Tensorflow, DNN, NLP);
 
 ● Deployed an online classifying service for news topic modeling using the trained model.
+
+#Architecture
+![image](https://github.com/wxm146case/Tap-News-System/blob/master/structure.PNG)
