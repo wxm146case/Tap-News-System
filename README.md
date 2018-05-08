@@ -13,3 +13,6 @@ This is a real time news scraping and recommendation system. The system uses a n
 
 # Architecture
 ![image](https://github.com/wxm146case/Tap-News-System/blob/master/structure.PNG)
+
+# data pipeline & NLP
+![image](https://github.com/wxm146case/Tap-News-System/blob/master/data%20pipeline%20%26%20NLP.PNG)
