@@ -9,6 +9,9 @@ python3 news_monitor.py &
 python3 news_fetcher.py &
 python3 news_deduper.py &
 
+cd ../news_topic_modeling_service/server
+python3 server.py &
+
 echo "=================================================="
 read -p "PRESS [ENTER] TO TERMINATE PROCESSES." PRESSKEY
 
